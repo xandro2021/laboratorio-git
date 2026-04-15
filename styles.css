@@ -29,6 +29,10 @@ h1, h2, h3, h4, h5, h6 {
     color: var(--institutional);
 }
 
+p {
+    margin: 0px;
+}
+
 /* Logo UCR */
 .ucr-logo {
     font-family: 'Merriweather', serif;
@@ -55,6 +59,14 @@ h1, h2, h3, h4, h5, h6 {
     background-color: var(--surface);
     border-bottom: 1px solid var(--outline);
     padding: 1.25rem 1.75rem;
+}
+
+.tutorial-card .card-body {
+    margin: 1rem;
+}
+
+.tutorial-card .card-body p {
+    margin-bottom: 1rem;
 }
 
 /* Pre y Code */
