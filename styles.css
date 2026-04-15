@@ -3,15 +3,29 @@
    Bootstrap + BEM + Colores Institucionales
    ============================================= */
 
+
 :root {
-    --primary: #00AEEF;
-    --primary-dark: #0087B8;
-    --institutional: #00236f;
-    --background: #ffffff;
-    --surface: #f8fafc;
-    --on-surface: #1e293b;
-    --on-surface-variant: #475569;
-    --outline: #cbd5e1;
+    /* Primary Palette */
+    --primary: #B6171E;                    /* Crimson red - acciones principales */
+    --primary-container: #da3433;
+    --secondary: #AC3509;                  /* Burnt coral - acentos y progreso */
+
+    /* Neutral Surfaces (tonal layering) */
+    --surface: #fff8f6;                    /* Base cálida */
+    --surface-container-low: #f5edeb;
+    --surface-container-lowest: #ffffff;
+    --surface-container-high: #efe6e4;
+    --surface-container-highest: #e8dedc;
+    --surface-dim: #e1d8d6;
+
+    /* Text & Outline */
+    --on-surface: #1e1b1a;                 /* Texto principal suave */
+    --on-surface-variant: #4a403e;
+    --outline: #906f6c;
+    --outline-variant: #e4beb9;
+
+    /* Shadow warm */
+    --shadow-color: rgba(144, 111, 108, 0.08);
 }
 
 /* Tipografía base */
