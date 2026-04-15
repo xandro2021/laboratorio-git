@@ -1,0 +1,77 @@
+#+title: Comandos usados en el proyecto
+
+* Iniciar Git
+#+begin_src bash
+git init
+#+end_src
+* Cambiar el nombre de la rama main
+#+begin_src bash
+git branch -m main
+#+end_src
+* Hacer primer commit
+#+begin_src bash
+git add .
+git commit -m "Estuructura inicial del proyecto"
+#+end_src
+* Verificar el historial de commits de forma resumida en una sola linea por commit
+#+begin_src bash
+git log --graph --decorate --all --oneline
+#+end_src
+* Crear nueva rama llamada “desarrollo” y pasarse a trabajar en ella
+#+begin_src bash
+git checkout -b desarrollo
+#+end_src
+* Realice un nuevo commit llamado "Agrega contenido en index"
+#+begin_src bash
+git add index.html
+git commit -m "Agrega contenido en index"
+#+end_src
+* Unir ramas main y desarrollo
+#+begin_src bash
+git checkout main
+git merge desarrollo
+#+end_src
+* Crear un commit llamado "Cambio temporal"
+#+begin_src bash
+git add styles.css
+git commit -m "Cambio temporal"
+git diff styles.css
+#+end_src
+* Eliminar el ultimo commit y sus cambios
+#+begin_src bash
+git reset --hard HEAD~1
+#+end_src
+* Recupere el ultimo commit
+#+begin_src bash
+git reflog
+git reset --hard 874a4f5
+#+end_src
+* Crear commit para agregar .gitignore
+#+begin_src bash
+echo -e "*.log\n.env\n.vscode" > .gitignore
+git add .gitignore
+git commit -m "Agrega gitignore"
+#+end_src
+* Vicular proyecto a repositorio
+Uso ssh en vez agregarlo por http
+#+begin_src bash
+git remote add origin git@github.com:xandro2021/laboratorio-git.git
+#+end_src
+* Subir proyecto a github
+#+begin_src bash
+git push -u origin main
+#+end_src
+* Crear una rama nueva llamada login
+#+begin_src bash
+git checkout -b login
+#+end_src
+* Hacer otro commit llamado "Agrega login"
+#+begin_src bash
+# Se crea el archivo login para poder hacer el commit
+git add login.html
+git commit -m "Agrega login"
+#+end_src
+* Suba la rama al repositorio
+#+begin_src bash
+git push --set-upstream origin login
+#+end_src
