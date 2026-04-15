@@ -1,0 +1,168 @@
+/* =============================================
+   ESTILOS PERSONALIZADOS - Laboratorio 2 UCR
+   Bootstrap + BEM + Colores Institucionales
+   ============================================= */
+
+:root {
+    --primary: #00AEEF;
+    --primary-dark: #0087B8;
+    --institutional: #00236f;
+    --background: #ffffff;
+    --surface: #f8fafc;
+    --on-surface: #1e293b;
+    --on-surface-variant: #475569;
+    --outline: #cbd5e1;
+}
+
+/* Tipografía base */
+body {
+    font-family: 'Source Sans Pro', system-ui, sans-serif;
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: var(--on-surface);
+    background-color: var(--background);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Merriweather', serif;
+    font-weight: 700;
+    color: var(--institutional);
+}
+
+/* Logo UCR */
+.ucr-logo {
+    font-family: 'Merriweather', serif;
+    letter-spacing: -2px;
+    font-weight: 900;
+}
+
+/* Tutorial Card (BEM) */
+.tutorial-card {
+    border: 1px solid var(--outline);
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    background-color: white;
+    overflow: hidden;
+}
+
+.tutorial-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 15px 35px -10px rgba(0, 174, 239, 0.15);
+    border-color: var(--primary);
+}
+
+.tutorial-card .card-header {
+    background-color: var(--surface);
+    border-bottom: 1px solid var(--outline);
+    padding: 1.25rem 1.75rem;
+}
+
+/* Pre y Code */
+pre {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 0.95rem;
+    background-color: #1e293b !important;
+    color: #e2e8f0;
+    padding: 1.5rem;
+    border-radius: 12px;
+    overflow-x: auto;
+    border: none;
+}
+
+pre code {
+    font-family: inherit;
+    background: transparent;
+    padding: 0;
+    color: inherit;
+}
+
+/* Sidebar Navigation (BEM) */
+.sidebar-nav .nav-link {
+    padding: 12px 18px;
+    color: var(--on-surface-variant);
+    font-weight: 600;
+    font-size: 0.95rem;
+    border-left: 3px solid transparent;
+    transition: all 0.25s ease;
+    margin-bottom: 2px;
+}
+
+.sidebar-nav .nav-link:hover,
+.sidebar-nav .nav-link.active {
+    color: var(--primary);
+    background-color: rgba(0, 174, 239, 0.05);
+    border-left-color: var(--primary);
+}
+
+/* Colores institucionales */
+.text-institutional { color: var(--institutional) !important; }
+.bg-institutional { background-color: var(--institutional) !important; }
+.text-primary { color: var(--primary) !important; }
+.bg-primary { background-color: var(--primary) !important; }
+
+/* Alert especial (nota académica) */
+.alert-primary {
+    background-color: rgba(0, 174, 239, 0.08);
+    border: 1px solid rgba(0, 174, 239, 0.25);
+}
+
+/* Footer */
+.bg-institutional {
+    background-color: var(--institutional);
+}
+
+.text-white-50 {
+    color: rgba(255, 255, 255, 0.7) !important;
+}
+
+/* Mejoras visuales adicionales */
+.lead {
+    font-size: 1.15rem;
+    color: var(--on-surface-variant);
+}
+
+.badge {
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+.border-dashed {
+    border-style: dashed !important;
+}
+
+/* Scrollbar sutil para sidebar */
+.sticky-top {
+    scrollbar-width: thin;
+    scrollbar-color: var(--primary) #f1f5f9;
+}
+
+.sticky-top::-webkit-scrollbar {
+    width: 6px;
+}
+
+.sticky-top::-webkit-scrollbar-thumb {
+    background-color: var(--primary);
+    border-radius: 20px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .display-4 {
+        font-size: 2.5rem;
+    }
+
+    .display-5 {
+        font-size: 2.2rem;
+    }
+
+    pre {
+        font-size: 0.9rem;
+        padding: 1.25rem;
+    }
+}
+
+/* Material Symbols */
+.material-symbols-outlined {
+    font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    vertical-align: middle;
+}
